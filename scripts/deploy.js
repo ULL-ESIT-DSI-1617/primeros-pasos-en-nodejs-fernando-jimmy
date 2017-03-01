@@ -16,7 +16,7 @@ var
 ghpages.publish('./gh-pages', {repo: git_repo, logger: function(m) {console.error(m);}});
 
 //Deplor a Gitbook
-exec(`git push ${gitbook_repo} master`, (error, stdout, stderr)=> {
+exec(`git push --force ${gitbook_repo} master`, (error, stdout, stderr)=> {
     if (error) {
         console.error(`exec error deploying to gitbook: ${error}`);
         return;

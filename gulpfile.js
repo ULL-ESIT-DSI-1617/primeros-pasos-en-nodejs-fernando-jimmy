@@ -9,3 +9,7 @@ gulp.task('build', ()=> {
 gulp.task('serve', ()=> {
 	exec('node ./scripts/server.js');
 });
+
+gulp.task('deploy', ()=> {
+	exec('node ./scripts/deploy.js');
+})
