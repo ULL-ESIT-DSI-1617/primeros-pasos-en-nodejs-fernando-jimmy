@@ -1,27 +1,14 @@
-# GitBook Boilerplate
+# Primeros pasos en NodeJS
+Este proyecto es una práctica de la asignatura _Desarrollo de Sistemas Informáticos_ del grado de Ingeniería Informática de la Universidad de La Laguna, en la cual se nos pide publicar un libro en **Gitbook**, **Github**, utilizando la rama **gh-pages**, y en nuestra plataforma IaaS, proporcionada por la universidad, automatizando las tareas haciendo uso de **gulp** para ello.
 
-# Installation
+### Componentes del equipo
+[Alex Jimmy Montaño fuentes](https://didream.github.io)
 
-```shell
-cd ~/code
+[Fernando Nantes-Machado Toledo](https://alu100897975.github.io)
 
-git clone https://github.com/enten/gitbook-boilerplate.git awesome-project
+### Enlaces de interés
+[Libro en Gitbook](https://didream.gitbooks.io/primeros-pasos-en-nodejs-fernando-jimmy/content)
 
-cd awesome-project
+[Libro en Github](https://ull-esit-dsi-1617.github.io/primeros-pasos-en-nodejs-fernando-jimmy/)
 
-rm -fr .git
-
-vi package.json
-# edit repository.url and repository.wiki
-
-git remote add origin <url>
-
-npm run build
-# or
-# npm run generate-gitbook && npm run generate-wiki
-
-npm run deploy
-# or
-# npm run deploy-gitbook && npm run deploy-wiki
-```
-__Important__: Wiki must be created on Github
+[Libro en IaaS Jimmy](http://10.6.129.229:8080/index.html)

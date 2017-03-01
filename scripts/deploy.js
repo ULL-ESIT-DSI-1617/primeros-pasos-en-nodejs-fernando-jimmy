@@ -2,7 +2,7 @@
 
 var
     ghpages = require('gh-pages'), //Incluimos el módulo gh-pages.
-    exec = require('child_process').exec,
+    exec = require('child_process').execSync,
     repo = require('../package.json').repository;
 
 
@@ -13,14 +13,20 @@ var
 
 
 //Deploy a Github
-ghpages.publish('./gh-pages', {repo: git_repo, logger: function(m) {console.error(m);}});
 
-//Deplor a Gitbook
-exec(`git push --force ${gitbook_repo} master`, (error, stdout, stderr)=> {
-    if (error) {
-        console.error(`exec error deploying to gitbook: ${error}`);
-        return;
-    }
-    console.log(`stdout: ${stdout}`);
-    console.log(`stderr: ${stderr}`);
-});
+console.log("Desplegando en Github...");
+ghpages.publish('./gh-pages', {
+    repo: git_repo,
+    logger: function(m) {console.error(m);}
+    },
+    (error) => {
+        if(error) {
+            console.error('Algo salió mal :(');
+        }else {
+            console.log('gh-pages actualizado');
+        }
+    });
+
+console.log('Desplegando en Gitbook');
+//Deploy a Gitbook
+exec(`git push --force ${gitbook_repo} master`,{stdio:'inherit'});
