@@ -3,29 +3,13 @@ var gulp = require('gulp');
 const exec = require('child_process').execSync
 
 gulp.task('build', ()=> {
-	exec('node ./scripts/gitbook-build.js', (error, stdout, stderr)=> {
-	    if (error) {
-	        console.error(`exec error build gitbook: ${error}`);
-	        return;
-	    }
-	    console.log(`stdout: ${stdout}`);
-	    console.log(`stderr: ${stderr}`);
-	    console.log("Deploy a Gitbook realizado");
-	});
+	exec('node ./scripts/gitbook-build.js', {stdio:'inherit'});
 });
 
 gulp.task('serve', ['build'],()=> {
-	exec('node ./scripts/server.js');
+	exec('node ./scripts/server.js', {stdio:'inherit'});
 });
 
 gulp.task('deploy', ['build'], ()=> {
-	exec('node ./scripts/deploy.js', (error, stdout, stderr)=> {
-	    if (error) {
-	        console.error(`exec error deploy task: ${error}`);
-	        return;
-	    }
-	    console.log(`stdout: ${stdout}`);
-	    console.log(`stderr: ${stderr}`);
-	    console.log("Deploy a Gitbook realizado");
-	});
+	exec('node ./scripts/deploy.js', {stdio:'inherit'});
 })
