@@ -13,9 +13,21 @@ var
 
 
 //Deploy a Github
-ghpages.publish('./gh-pages', {repo: git_repo, logger: function(m) {console.error(m);}});
+ghpages.publish('./gh-pages', {
+    repo: git_repo,
+    logger: function(m) {console.error(m);
+    },
+    (error) => {
+        if(error) {
+            console.error('Algo salió mal :(');
+        }else {
+            console.log('gh-pages actualizado');
+        }
+    }
 
-//Deplor a Gitbook
+});
+
+//Deploy a Gitbook
 exec(`git push --force ${gitbook_repo} master`, (error, stdout, stderr)=> {
     if (error) {
         console.error(`exec error deploying to gitbook: ${error}`);
