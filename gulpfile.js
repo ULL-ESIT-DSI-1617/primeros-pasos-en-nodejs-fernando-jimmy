@@ -14,7 +14,7 @@ gulp.task('build', ()=> {
 	});
 });
 
-gulp.task('serve', ()=> {
+gulp.task('serve', ['build'],()=> {
 	exec('node ./scripts/server.js');
 });
 
