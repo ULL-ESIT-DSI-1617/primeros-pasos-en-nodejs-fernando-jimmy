@@ -13,4 +13,5 @@ En este libro se describirá la instalación básica de múltiples herramientas 
 
 [Libro publicado en IaaS Jimmy](http://10.6.129.229:8080/)
 
+[Libro publicado en IaaS Fernando](http://10.6.128.253:8080/gh-pages/index.html)
 [Repositorio del libro en github](https://github.com/ull-esit-dsi-1617/tareas-iniciales-jimmy)
