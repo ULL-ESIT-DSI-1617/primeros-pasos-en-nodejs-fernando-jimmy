@@ -4,7 +4,7 @@
 Gulpfiles y scripts escritos es Node.js, así como desplegarlo en el IaaS de 
 la ULL.
 
-## Herramientas usadas
+## Herramientas que usamos
 
 * Node.js para escribir scripts.
 * Gulp para la creación de gulpfiles.
