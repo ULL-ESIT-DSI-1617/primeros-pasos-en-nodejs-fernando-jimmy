@@ -1,3 +1,4 @@
 node_modules/
 gh-pages/
+!txt/gh-pages/
 wiki/
